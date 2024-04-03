@@ -1,7 +1,9 @@
 const calculateTip = (amount: number, percent: number) => {
-    return (amount * percent);
+    return Math.round((amount * percent) * 100) / 100;
 }
 
 const perPerson = (people: number, amount: number) => {
-    return (amount / people);
+    return Math.round((amount / people) * 100) / 100;
 }
+
+export {calculateTip, perPerson}

@@ -1,0 +1,32 @@
+.bg{
+    background-color: hsl(185, 41%, 84%);
+}
+
+.space-font{
+    font-family: space;
+}
+
+.dark-bg{
+    background-color: hsl(183, 100%, 15%);
+}
+
+.light-text{
+    color: hsl(172, 67%, 45%);
+}
+
+.dark-text{
+    color: hsl(183, 100%, 15%);
+}
+
+.dark-button{
+    background-color: hsl(183, 100%, 15%);
+}
+
+.gray{
+    background-color: hsl(189, 41%, 97%);
+}
+
+@font-face {
+    font-family: space;
+    src: url('../assets/SpaceMono-Regular.ttf');
+}
