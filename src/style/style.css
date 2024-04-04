@@ -22,8 +22,30 @@
     background-color: hsl(183, 100%, 15%);
 }
 
+.dark-button:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.green-button{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.green-button:hover{
+    background-color: hsl(172, 84%, 71%);
+}
+
 .gray{
     background-color: hsl(189, 41%, 97%);
+}
+
+.gray:focus{
+    border: solid 4px hsl(172, 67%, 45%);
+}
+
+.another-gray{
+    color: hsl(186, 14%, 43%);
 }
 
 @font-face {

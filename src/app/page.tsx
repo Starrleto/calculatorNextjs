@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between sm:p-36 p-0 bg dark-text space-font">
 
-    <p className="font-bold tracking-wider">SPLITTER</p>
+    <p className="font-bold tracking-wider text-2xl">SPLITTER</p>
 
     <div className="grid sm:grid-cols-1 bg-white rounded-xl">
       <div className="grid lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 p-10 rounded-xl gap-2">
@@ -104,29 +104,31 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="dark-bg rounded-lg text-white p-10">
+        <div className="dark-bg rounded-lg text-white p-10 flex flex-col justify-between">
+          <div>
           <div className="flex justify-between">
-            <div>
-              <h1 className="font-bold">Tip Amount</h1>
-              <p>/person</p>
+              <div>
+                <h1 className="font-bold">Tip Amount</h1>
+                <p className="another-gray font-bold">/person</p>
+              </div>
+              <div>
+                <h1 className="text-4xl light-text font-bold">${perPersonTip}</h1>
+              </div>
             </div>
-            <div>
-              <h1 className="text-4xl light-text font-bold">${perPersonTip}</h1>
-            </div>
-          </div>
 
-          <div className="flex justify-between">
-            <div>
-              <h1>Total</h1>
-              <p>/person</p>
-            </div>
-            <div>
-              <h1 className="text-4xl light-text font-bold">${tipAmount}</h1>
+            <div className="flex justify-between mt-9">
+              <div>
+                <h1 className="font-bold">Total</h1>
+                <p className="another-gray font-bold">/person</p>
+              </div>
+              <div>
+                <h1 className="text-4xl light-text font-bold">${tipAmount}</h1>
+              </div>
             </div>
           </div>
 
           <div className="w-full">
-            <button onClick={reset} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button onClick={reset} className="w-full green-button text-white font-bold py-2 px-4 rounded">
               RESET
             </button>
           </div>
