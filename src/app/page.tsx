@@ -46,7 +46,7 @@ export default function Home() {
       const m = calculateTip(amount, perect);
       const p = perPerson(people, m);
 
-      setTipAmount(m);
+      setTipAmount(Math.round(((m+amount) / people) * 100) / 100);
       setPerPersonTip(p);
     }
     else{
@@ -59,6 +59,13 @@ export default function Home() {
     setAmount(0);
     setPercet(0);
     setPeople(NaN);
+
+    const o = document.getElementById("input1") as HTMLInputElement;
+    const o2 = document.getElementById("input2") as HTMLInputElement;
+    const o3 = document.getElementById("input3") as HTMLInputElement;
+    o.value = '';
+    o2.value = '';
+    o3.value = '';
   }
 
   useEffect(() => {
@@ -78,7 +85,7 @@ export default function Home() {
               <p>Bill</p>
               <div className="relative">
                 <Image src={dollar} alt="Dollar Sign" className="absolute left-3 top-4"></Image>
-                <input onChange={(e) => setPriceAmount(parseInt(e.target.value))} type="text" className=" text-gray-900 rounded-lg block w-full p-2.5 gray text-right dark-text font-bold text-xl" required />
+                <input onChange={(e) => setPriceAmount(parseInt(e.target.value))} type="text" className=" text-gray-900 outline-none rounded-lg block w-full p-2.5 gray text-right dark-text font-bold text-xl" required id="input3" />
               </div>
           </div>
 
@@ -102,7 +109,7 @@ export default function Home() {
                   50%
                 </button>
                 <div>
-                  <input onChange={(e) => setPercentage(parseInt(e.target.value)/100)} type="text" className="text-2xl dark-text rounded-lg text-center gray block w-full p-2.5 " placeholder="Custom" required />
+                  <input onChange={(e) => setPercentage(parseInt(e.target.value)/100)} type="text" className="text-2xl outline-none dark-text rounded-lg text-center gray block w-full p-2.5 " placeholder="Custom" required id="input1" />
                 </div>
               </div>
           </div>
@@ -114,7 +121,7 @@ export default function Home() {
             </div>
               <div className="relative">
                 <Image src={person} alt="Dollar Sign" className="absolute left-3 top-4"></Image>
-                <input onChange={(e) => setNumPeople(parseInt(e.target.value))} type="text" className={people == 0 ? "text-gray-900 rounded-lg block w-full p-2.5 gray-error text-right dark-text font-bold text-xl" : "text-gray-900 rounded-lg block w-full p-2.5 gray text-right dark-text font-bold text-xl"}required />
+                <input onChange={(e) => setNumPeople(parseInt(e.target.value))} type="text" className={people == 0 ? "text-gray-900 rounded-lg block w-full p-2.5 gray-error text-right dark-text font-bold text-xl outline-none" : "text-gray-900 outline-none rounded-lg block w-full p-2.5 gray text-right dark-text font-bold text-xl"} required id="input2" />
             </div>
           </div>
         </div>

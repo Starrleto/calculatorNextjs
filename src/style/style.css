@@ -52,11 +52,11 @@
 
 .gray-error{
     background-color: hsl(189, 41%, 97%);
-    border: solid 3px rgb(244, 48, 48);
+    border: solid 2px rgb(244, 48, 48);
 }
 
 .gray:focus{
-    border: solid 4px hsl(172, 67%, 45%);
+    border: solid 2px hsl(172, 67%, 45%);
 }
 
 .another-gray{
