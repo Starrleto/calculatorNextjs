@@ -77,7 +77,7 @@ export default function Home() {
 
     <Image src={logo} alt="Logo" className="m-24"></Image>
 
-    <div className="grid sm:grid-cols-1 bg-white rounded-xl sm:m-36 m-0">
+    <div className="grid sm:grid-cols-1 bg-white rounded-xl sm:ml-36 sm:mr-36 sm:mb-36">
       <div className="grid lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 p-10 rounded-xl gap-6">
 
         <div className="flex flex-col justify-between">
