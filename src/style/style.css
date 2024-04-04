@@ -23,6 +23,11 @@
 }
 
 .dark-button:hover{
+    background-color: hsl(172, 84%, 71%);
+    color: hsl(183, 100%, 15%);
+}
+
+.selected-button{
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
 }
@@ -36,8 +41,18 @@
     background-color: hsl(172, 84%, 71%);
 }
 
+.disabled-button{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 36%, 33%);
+}
+
 .gray{
     background-color: hsl(189, 41%, 97%);
+}
+
+.gray-error{
+    background-color: hsl(189, 41%, 97%);
+    border: solid 3px rgb(244, 48, 48);
 }
 
 .gray:focus{
@@ -46,6 +61,10 @@
 
 .another-gray{
     color: hsl(186, 14%, 43%);
+}
+
+.red-text{
+    color: rgb(244, 48, 48);
 }
 
 @font-face {
